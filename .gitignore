@@ -1,0 +1,10 @@
+# Roh-Harvest-Arbeitsverzeichnisse (intermediär; die durable Aufzeichnung ist leads.jsonl)
+harvest/
+
+# Python
+__pycache__/
+*.pyc
+
+# temporäre Render-/Scratch-Dateien
+*.tmp
+.DS_Store

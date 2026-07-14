@@ -79,7 +79,31 @@ Passend, wenn: Ziel-Gewerk **und** Standort DE/AT **und** ≤25 MA **und** errei
 
 ## Betrieb
 
-Empfohlen: GitHub Actions Daily-Cron → Agent läuft, committet Zustand zurück ins Repo, postet den Tages-Batch optional als Issue. Beim allerersten Lauf werden die Zustandsdateien angelegt und `sources.json` mit den Seed-Quellen (Status `unbewiesen`) befüllt; Start konservativ mit hohem Explore-Anteil, bis Ertragsdaten vorliegen.
+Beim allerersten Lauf werden die Zustandsdateien angelegt und `sources.json` mit den Seed-Quellen (Status `unbewiesen`) befüllt; Start konservativ mit hohem Explore-Anteil, bis Ertragsdaten vorliegen.
+
+### Pipeline-Skripte (`scripts/`)
+
+| Skript | Zweck |
+|---|---|
+| `scripts/process_harvest.py` | Verarbeitet die Roh-Harvest-JSONs eines Laufs: **Dedup gegen `leads.jsonl`** (Domain > Name+PLZ > Telefon), Scoring (A–E), Aufhänger, **Backlog-Promotion**, schreibt `daily/<datum>.md`, schreibt `leads.jsonl` fort, hängt `metrics.csv`-Zeile an. |
+| `scripts/md_to_pdf.py` | Rendert einen `daily/<datum>.md` nach **PDF** (headless Chromium, kein externes Paket nötig). |
+
+**Manueller Tageslauf:**
+```bash
+# 1) Recherche-Agenten befüllen harvest/<datum>/harvest_<segment>.json (je Lead über Impressum verifiziert)
+# 2) Verarbeiten:
+python3 scripts/process_harvest.py --harvest-dir harvest/<datum> --date <datum> --repo . --sources-used 8 --new-sources 0
+# 3) PDF erzeugen:
+python3 scripts/md_to_pdf.py daily/<datum>.md daily/<datum>.pdf
+```
+
+Der Report wird **immer auch als PDF** unter `daily/<datum>.pdf` ausgegeben und dem AE geliefert.
+
+### Tägliche Routine
+
+Eine **Routine** (scheduled trigger) startet täglich eine frische Session, die den kompletten Runbook-Lauf ausführt (Harvest → Verarbeiten → PDF → commit/push) und den neuen Report als PDF liefert. Läuft auf Branch `claude/handwerk-lead-sdr-4hrxjs`. Zeitpunkt/Änderung siehe Routine-Einstellungen.
+
+> Alternativ: GitHub-Actions-Daily-Cron, der dieselben Skripte ausführt und den Zustand zurück-committet.
 
 ---
 
