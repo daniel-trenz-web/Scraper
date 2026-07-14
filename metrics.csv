@@ -1,1 +1,2 @@
 datum,quellen_genutzt,neue_quellen,roh_kandidaten,angereichert,qualifiziert,uebergeben,dubletten,avg_score,top_quelle,notiz
+2026-07-14,8,8,47,47,47,25,0,4.09,Impressum-Verifikation (8 Segmente DE+AT),Erstlauf/Bootstrap; explore-lastig; MA-Schaetzung ist Engpass (selten oeffentlich); Northdata/Kununu nicht abrufbar -> Refresh

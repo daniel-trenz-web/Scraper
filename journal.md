@@ -26,11 +26,18 @@
 - Harte Regel an alle Recherche-Agents: **kein Feld raten**, unbekannt = null, jeder Lead braucht eine tatsächlich abgerufene URL. Lieber weniger echte als mehr geratene Leads.
 
 ### Ergebnisse
-<!-- wird nach Harvest gefüllt: gefunden / qualifiziert / übergeben / Dubletten / avg_score / Top-Segmente -->
-_(wird nach Abschluss des Harvests ergänzt)_
+- **Roh-Kandidaten:** 47 · **Qualifiziert (ICP):** 47 · **Übergeben heute:** 25 · **Backlog/Reserve:** 22 · **Dubletten:** 0 (Erstlauf, leere Historie).
+- **Ø-Score (1–5):** 4.09 · **Verteilung:** A=9, B=34, C=3, D=1, E=0.
+- **Länder:** DE=36, AT=11. **Gewerke:** SHK/Installation 9, Elektro 9, Maler/Stuck. 8, Tischler 8, Dach/Zimmerer 6, GaLaBau 3, Metallbau 3, Fliesenleger 1.
+- **Alle 47** über das **firmeneigene Impressum** verifiziert (Name/Adresse/Tel/Mail belegt). Kein erfundenes Feld; Unbekanntes = null.
+- **Ausgeschlossen & dokumentiert:** ~10 Betriebe (>25 MA wie Stemmle ~80, Schäffer ~70, Maroscheck ~90, MD Elektrotechnik 28, antignum-Gruppe; Region außerhalb: Wendt/Rabe SH; nicht verifizierbar/503: Fliesen Team Salzburg, Ilia-Oarda Mainz, Lehner Ingolstadt).
 
 ### Beobachtungen / Hypothesen fürs nächste Mal
-<!-- wird nach Harvest gefüllt -->
+- **Was funktioniert:** WebSearch(Gewerk×Ort) → Impressum-Verifikation liefert saubere, compliance-konforme Daten mit sehr hohem Yield (Quelle `websearch-impressum` → Status `bewaehrt`). Impressen deutscher/österreichischer Betriebe sind zuverlässig strukturiert und gut abrufbar.
+- **Engpass = MA-Zahl:** selten öffentlich → nur 9 Leads mit belegter Größe (→ Score A). Hypothese: Northdata/Firmenbuch/firmenabc.at im **Anreicherungs-Slot** gezielt nachladen hebt viele B→A. **Refresh-Aufgabe:** Northdata & Kununu waren diesmal nicht per Fetch abrufbar — Zugriffsweg (evtl. anderer Pfad/Playwright) im nächsten Lauf testen.
+- **Aufhänger:** signalbasiert generiert (Wachstum/Zettel/keine-Online-Termine/Flotte/Notdienst). Hypothese: Hooks mit konkret zitiertem Signal (z. B. Zahl offener Stellen) erhöhen AE-Trefferquote — im Feedback-Loop messen.
+- **Explore/Exploit ab morgen:** Ertragsdaten liegen jetzt vor → auf 0.70/0.20/0.10 umstellen. Exploit = `websearch-impressum` weiter, aber **neue Gewerke/Regionen rotieren** (heute nicht abgedeckt: Bodenleger/Parkett, Estrichleger, Fenster-/Rollladenbau, Trockenbau; Regionen: Berlin/Brandenburg, Schleswig-Holstein, Saarland, Vorarlberg, Kärnten).
+- **Sättigung vermeiden:** Innungs-Mitgliederlisten (16 neue Quellen aufgenommen) als nächste Exploit-Ebene erschließen — sie liefern gezielt die kleinsten, am wenigsten digitalisierten Betriebe.
 
 ### Quellen-Backlog (zu prüfen an Folgetagen)
 - Regionale HWK-Betriebssuchen einzeln erschließen und je als eigene Quelle mit Selektoren erfassen (hwk-muenchen.de, hwk-koeln.de, hwk-stuttgart.de, …).

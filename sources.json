@@ -1,11 +1,39 @@
 [
   {
+    "id": "websearch-impressum",
+    "name": "Gezielte Websuche (Gewerk×Ort) + Verifikation via Firmen-Impressum",
+    "url": "https://method/websearch-impressum",
+    "typ": "Methode (Discovery+Verifikation)",
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
+    "robots_ok": true,
+    "zugriff": "fetch",
+    "status": "bewaehrt",
+    "letzter_lauf": "2026-07-14",
+    "gefunden_gesamt": 47,
+    "qualifiziert_gesamt": 47,
+    "yield": 1.0,
+    "avg_score": 4.09,
+    "extraktion": "Pro Gewerk×Ort WebSearch -> Kandidatennamen; jeder Fakt aus firmeneigenem Impressum (Pflichtangaben: Name/Adresse/Tel/Mail/GF). Compliance-konform (kein Verzeichnis-Massen-Scraping), No-Fabrication eingehalten. Engpass: MA-Zahl selten oeffentlich.",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "seed"
+  },
+  {
     "id": "hwk-betriebssuche-de",
     "name": "Handwerkskammer Betriebssuchen (regionale HWK-Datenbanken)",
     "url": "https://www.handwerkskammer.de",
     "typ": "Kammer-Verzeichnis",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -23,8 +51,17 @@
     "name": "Innungsverzeichnisse pro Gewerk (Elektro-, SHK-, Maler-, Dachdecker-, Tischler-Innungen)",
     "url": "https://www.zdh.de",
     "typ": "Verband/Innung",
-    "land": ["DE"],
-    "gewerke": ["Elektro", "SHK", "Maler", "Dachdecker", "Tischler", "*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Elektro",
+      "SHK",
+      "Maler",
+      "Dachdecker",
+      "Tischler",
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -42,8 +79,12 @@
     "name": "Wer liefert was (wlw.de)",
     "url": "https://www.wlw.de",
     "typ": "B2B-Verzeichnis",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -61,8 +102,12 @@
     "name": "Gelbe Seiten (gelbeseiten.de)",
     "url": "https://www.gelbeseiten.de",
     "typ": "Branchenverzeichnis",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -80,8 +125,12 @@
     "name": "Das Oertliche (dasoertliche.de)",
     "url": "https://www.dasoertliche.de",
     "typ": "Branchenverzeichnis",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -99,8 +148,12 @@
     "name": "11880.com",
     "url": "https://www.11880.com",
     "typ": "Branchenverzeichnis",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -118,8 +171,12 @@
     "name": "meinestadt.de",
     "url": "https://www.meinestadt.de",
     "typ": "Stadtportal/Branchenbuch",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -137,8 +194,13 @@
     "name": "Yelp Deutschland (yelp.de)",
     "url": "https://www.yelp.de",
     "typ": "Bewertungsportal",
-    "land": ["DE", "AT"],
-    "gewerke": ["*"],
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -156,8 +218,12 @@
     "name": "MyHammer (myhammer.de)",
     "url": "https://www.myhammer.de",
     "typ": "Handwerker-Marktplatz",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -175,8 +241,12 @@
     "name": "Blauarbeit (blauarbeit.de)",
     "url": "https://www.blauarbeit.de",
     "typ": "Handwerker-Marktplatz",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -194,8 +264,12 @@
     "name": "Check24 Profis (check24.de/profis)",
     "url": "https://www.check24.de/profis",
     "typ": "Handwerker-Marktplatz",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -213,17 +287,22 @@
     "name": "Northdata (northdata.com)",
     "url": "https://www.northdata.com",
     "typ": "Firmendaten/Anreicherung",
-    "land": ["DE", "AT"],
-    "gewerke": ["*"],
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
-    "letzter_lauf": null,
+    "letzter_lauf": "2026-07-14",
     "gefunden_gesamt": 0,
     "qualifiziert_gesamt": 0,
     "yield": 0.0,
     "avg_score": null,
-    "extraktion": "ANREICHERUNG nicht Ziehen. Fuer GmbHs: Handelsregister, Umsatz-/MA-Indikatoren, Geschaeftsfuehrer (Ansprechpartner!). MA-Schaetzung Konfidenz hoch wenn Band ausgewiesen.",
+    "extraktion": "ANREICHERUNG nicht Ziehen. Fuer GmbHs: Handelsregister, Umsatz-/MA-Indikatoren, Geschaeftsfuehrer (Ansprechpartner!). MA-Schaetzung Konfidenz hoch wenn Band ausgewiesen. | Nicht abrufbar in diesem Lauf (Premium/Block) -> Refresh-Aufgabe.",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -232,8 +311,12 @@
     "name": "Unternehmensregister (unternehmensregister.de)",
     "url": "https://www.unternehmensregister.de",
     "typ": "Amtliches Register",
-    "land": ["DE"],
-    "gewerke": ["*"],
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -251,17 +334,22 @@
     "name": "Kununu (kununu.com)",
     "url": "https://www.kununu.com",
     "typ": "Arbeitgeberbewertung/Anreicherung",
-    "land": ["DE", "AT"],
-    "gewerke": ["*"],
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
-    "letzter_lauf": null,
+    "letzter_lauf": "2026-07-14",
     "gefunden_gesamt": 0,
     "qualifiziert_gesamt": 0,
     "yield": 0.0,
     "avg_score": null,
-    "extraktion": "ANREICHERUNG. MA-Baender + Kultur-Signale. Offizielle Anzeige nutzen, kein ToS-Bruch.",
+    "extraktion": "ANREICHERUNG. MA-Baender + Kultur-Signale. Offizielle Anzeige nutzen, kein ToS-Bruch. | Nicht per Fetch abrufbar in diesem Lauf -> Refresh-Aufgabe.",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -270,8 +358,13 @@
     "name": "Google Business / Maps (nur Suche + Einzelseiten)",
     "url": "https://www.google.com/maps",
     "typ": "Karten/Business",
-    "land": ["DE", "AT"],
-    "gewerke": ["*"],
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "manuell",
     "status": "unbewiesen",
@@ -289,17 +382,21 @@
     "name": "WKO Firmen A-Z (firmen.wko.at)",
     "url": "https://firmen.wko.at",
     "typ": "Kammer-Verzeichnis (KERNQUELLE AT)",
-    "land": ["AT"],
-    "gewerke": ["*"],
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
-    "letzter_lauf": null,
+    "letzter_lauf": "2026-07-14",
     "gefunden_gesamt": 0,
     "qualifiziert_gesamt": 0,
     "yield": 0.0,
     "avg_score": null,
-    "extraktion": "KERNQUELLE AT: nahezu jeder Gewerbebetrieb Pflichtmitglied. Suche nach Branche + Bundesland/Ort. Eintrag mit Name, Adresse, Tel, oft Web + Mail.",
+    "extraktion": "KERNQUELLE AT: nahezu jeder Gewerbebetrieb Pflichtmitglied. Suche nach Branche + Bundesland/Ort. Eintrag mit Name, Adresse, Tel, oft Web + Mail. | AT: als Discovery-Hilfe beruehrt (Betriebsnamen).",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -308,17 +405,21 @@
     "name": "Herold (herold.at)",
     "url": "https://www.herold.at",
     "typ": "Branchenverzeichnis",
-    "land": ["AT"],
-    "gewerke": ["*"],
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
-    "letzter_lauf": null,
+    "letzter_lauf": "2026-07-14",
     "gefunden_gesamt": 0,
     "qualifiziert_gesamt": 0,
     "yield": 0.0,
     "avg_score": null,
-    "extraktion": "AT Branchenbuch. Gewerk + Ort. Name, Adresse, Tel, Web, Bewertungen.",
+    "extraktion": "AT Branchenbuch. Gewerk + Ort. Name, Adresse, Tel, Web, Bewertungen. | AT: als Discovery-/Verifikationshilfe beruehrt.",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -327,17 +428,21 @@
     "name": "FirmenABC (firmenabc.at)",
     "url": "https://www.firmenabc.at",
     "typ": "Firmenverzeichnis",
-    "land": ["AT"],
-    "gewerke": ["*"],
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
-    "letzter_lauf": null,
+    "letzter_lauf": "2026-07-14",
     "gefunden_gesamt": 0,
     "qualifiziert_gesamt": 0,
     "yield": 0.0,
     "avg_score": null,
-    "extraktion": "AT Firmendaten inkl. Branche, Rechtsform, teils Geschaeftsfuehrer. Anreicherung + Ziehen.",
+    "extraktion": "AT Firmendaten inkl. Branche, Rechtsform, teils Geschaeftsfuehrer. Anreicherung + Ziehen. | AT: fuer MA-/Bilanz-/GF-Anreicherung genutzt (W. Schwarz, Boehm, NAVA, Top Malerei).",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -346,8 +451,12 @@
     "name": "FirmenMonitor (firmenmonitor.at)",
     "url": "https://www.firmenmonitor.at",
     "typ": "Firmendaten/Anreicherung",
-    "land": ["AT"],
-    "gewerke": ["*"],
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -365,8 +474,12 @@
     "name": "MeinBezirk (meinbezirk.at)",
     "url": "https://www.meinbezirk.at",
     "typ": "Regionalportal",
-    "land": ["AT"],
-    "gewerke": ["*"],
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "fetch",
     "status": "unbewiesen",
@@ -384,8 +497,13 @@
     "name": "Indeed / StepStone (Stellenanzeigen-Signal)",
     "url": "https://de.indeed.com",
     "typ": "Signal-Quelle (Anreicherung)",
-    "land": ["DE", "AT"],
-    "gewerke": ["*"],
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
     "robots_ok": null,
     "zugriff": "manuell",
     "status": "unbewiesen",
@@ -397,5 +515,373 @@
     "extraktion": "SIGNAL nicht Ziehen. Offene Stellen = Wachstum -> Prozessbedarf. Anzeigentext nennt teils MS Office/Excel/Papier -> Digitalisierungsluecke.",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
+  },
+  {
+    "id": "innung-shk-muenchen",
+    "name": "SHK-Innung München — Innungsbetrieb-Suche",
+    "url": "https://shk-innung-muenchen.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "SHK"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "kuratierte SHK-Betriebe Raum München; danach Firmenwebsite verifizieren",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "wasserwaermeluft-de",
+    "name": "wasserwaermeluft.de — SHK-Handwerkersuche (bundesweit)",
+    "url": "https://www.wasserwaermeluft.de",
+    "typ": "Verband/Suche",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "SHK"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "bundesweite SHK-Vorauswahl, danach Impressum verifizieren",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "fv-eit-nrw",
+    "name": "Fachverband Elektro- u. Informationstechnik NRW",
+    "url": "https://www.feh-nrw.de",
+    "typ": "Innung/Verband",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Elektro"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Innungs-Mitgliederquelle Elektro NRW",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "elektroinnung-koeln",
+    "name": "Elektroinnung Köln",
+    "url": "https://www.elektroinnungkoeln.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Elektro"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Betriebsuebersicht Elektro Raum Köln",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "malerinnung-mittelbaden",
+    "name": "Maler- u. Lackierer-Innung Mittelbaden/Nord + Mannheim",
+    "url": "https://www.malerinnung.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Maler"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Mitgliederlisten Maler BW/Kurpfalz",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "maler-org",
+    "name": "maler.org — Branchenverzeichnis (Einzelprofile je Ort)",
+    "url": "https://www.maler.org",
+    "typ": "Branchenverzeichnis",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Maler"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Maler-Profile pro Stadt",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "tischler-schreiner-org",
+    "name": "tischler-schreiner.org — Branchenverzeichnis Tischler/Schreiner",
+    "url": "https://www.tischler-schreiner.org",
+    "typ": "Branchenverzeichnis",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Tischler"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Tischler nach Ort",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "hamburg-branchenbuch",
+    "name": "hamburg.de Branchenbuch",
+    "url": "https://www.hamburg.de/branchenbuch",
+    "typ": "Stadtportal",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "HH-Branchenbuch inkl. Tischler",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "metallbau-portal-de",
+    "name": "metallbau-portal.de — Verzeichnis Metallbau/Schlosserei",
+    "url": "https://www.metallbau-portal.de",
+    "typ": "Branchenverzeichnis",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Metallbau"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Metallbau nach Bundesland/Ort; danach Firmenwebsite verifizieren",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "galabau-kollegen-de",
+    "name": "galabau-kollegen.de — GaLaBau Job-/Recruiting-Portal (Signal)",
+    "url": "https://www.galabau-kollegen.de",
+    "typ": "Signal-Quelle",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "GaLaBau"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "offene Stellen = Wachstumssignal",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "dachdecker-innung-leipzig",
+    "name": "Dachdecker-Innung Leipzig — Fachbetriebsliste",
+    "url": "https://www.dachdecker-innung-leipzig.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Dachdecker"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Innungs-Fachbetriebe Leipzig",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "zimmererinnung-dresden",
+    "name": "Zimmererinnung Dresden — Mitgliederliste",
+    "url": "https://zimmererinnung-dresden.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Zimmerer"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Mitglieder Zimmerer Raum Dresden",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "creditreform-firmeneintrag",
+    "name": "Creditreform Firmeneintrag — Register-/Größendaten",
+    "url": "https://firmeneintrag.creditreform.de",
+    "typ": "Firmendaten/Anreicherung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "*"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "ANREICHERUNG: Gruendung/GF/Gesellschafter fuer Groesseneinordnung",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "installateure-noe-at",
+    "name": "Landesinnung NÖ Installateure",
+    "url": "https://www.installateure-noe.at",
+    "typ": "Innung",
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "SHK"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "AT: Landesinnungs-Verzeichnis Installateure NÖ",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "daibau-at",
+    "name": "daibau.at — Handwerker-Listen mit Bewertungen",
+    "url": "https://www.daibau.at",
+    "typ": "Bewertungsportal",
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "*"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "AT: Betriebe + Bewertungen je Ort/Gewerk (Kaufsignal)",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "tischlerei-liste-at",
+    "name": "tischlerei-liste.at — Verzeichnis Tischlereien",
+    "url": "https://www.tischlerei-liste.at",
+    "typ": "Branchenverzeichnis",
+    "land": [
+      "AT"
+    ],
+    "gewerke": [
+      "Tischler"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "AT: Tischlereien nach Bundesland/Ort",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-2026-07-14"
   }
 ]
