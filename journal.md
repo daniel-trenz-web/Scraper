@@ -39,6 +39,14 @@
 - **Explore/Exploit ab morgen:** Ertragsdaten liegen jetzt vor → auf 0.70/0.20/0.10 umstellen. Exploit = `websearch-impressum` weiter, aber **neue Gewerke/Regionen rotieren** (heute nicht abgedeckt: Bodenleger/Parkett, Estrichleger, Fenster-/Rollladenbau, Trockenbau; Regionen: Berlin/Brandenburg, Schleswig-Holstein, Saarland, Vorarlberg, Kärnten).
 - **Sättigung vermeiden:** Innungs-Mitgliederlisten (16 neue Quellen aufgenommen) als nächste Exploit-Ebene erschließen — sie liefern gezielt die kleinsten, am wenigsten digitalisierten Betriebe.
 
+### Nachtrag 2026-07-14 — Volumen auf ≥50/Tag + HubSpot
+
+- **Budget erhöht:** Tagesziel von 25 auf **50** (Konfig + Routine + `process_harvest --budget 50`).
+- **2. Harvest-Welle** (10 neue Segmente, neue Gewerke/Regionen): +60 verifizierte Leads. Neu abgedeckt: Fenster-/Rollladenbau, Trockenbau, Bodenleger/Parkett, Estrichleger; Regionen Berlin/Brandenburg, AT-West (Sbg/Tirol/Vbg), AT-Süd (Ktn/Stmk).
+- **Kombiniert: 107 verifizierte Leads** (0 Dubletten über beide Wellen — Städte/Gewerke sauber rotiert). **50 übergeben** (21 A / 29 B), **57 im Backlog**. DE 35 / AT 15 in der Übergabe; 12 Gewerke abgedeckt.
+- **HubSpot-Integration gebaut:** `export_hubspot_csv.py` (Import-CSV, keine Credentials) + `hubspot_sync.py` (CRM-API-Upsert, Dedup über domain, Dry-Run-sicher). Routine erzeugt täglich die CSV und synct automatisch, sobald `HUBSPOT_TOKEN` gesetzt ist.
+- **Beobachtung:** Der Yield pro Segment ist stabil ~5–6 verifizierte Leads; 16–18 Segmente/Tag reichen zuverlässig für ≥50 nach Dedup. MA-Zahl bleibt der Engpass — belegte Größe (→ Score A) korreliert stark mit Website-Teamangaben/Innungslisten. Nächster Hebel: Innungs-Mitgliederlisten als Exploit-Quelle + Northdata/firmenabc-Anreicherung.
+
 ### Quellen-Backlog (zu prüfen an Folgetagen)
 - Regionale HWK-Betriebssuchen einzeln erschließen und je als eigene Quelle mit Selektoren erfassen (hwk-muenchen.de, hwk-koeln.de, hwk-stuttgart.de, …).
 - Gewerkespezifische Innungs-Mitgliederlisten (oft die saubersten, kleinsten Betriebe).

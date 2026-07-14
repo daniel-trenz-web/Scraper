@@ -15,11 +15,11 @@
     "zugriff": "fetch",
     "status": "bewaehrt",
     "letzter_lauf": "2026-07-14",
-    "gefunden_gesamt": 47,
-    "qualifiziert_gesamt": 47,
+    "gefunden_gesamt": 107,
+    "qualifiziert_gesamt": 107,
     "yield": 1.0,
-    "avg_score": 4.09,
-    "extraktion": "Pro Gewerk×Ort WebSearch -> Kandidatennamen; jeder Fakt aus firmeneigenem Impressum (Pflichtangaben: Name/Adresse/Tel/Mail/GF). Compliance-konform (kein Verzeichnis-Massen-Scraping), No-Fabrication eingehalten. Engpass: MA-Zahl selten oeffentlich.",
+    "avg_score": 4.42,
+    "extraktion": "Pro Gewerk×Ort WebSearch -> Kandidatennamen; jeder Fakt aus firmeneigenem Impressum (Pflichtangaben: Name/Adresse/Tel/Mail/GF). Compliance-konform (kein Verzeichnis-Massen-Scraping), No-Fabrication eingehalten. Engpass: MA-Zahl selten oeffentlich. | Lauf 2026-07-14: 18 Segmente, 107 verifizierte Leads (0 Dubletten).",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "seed"
   },
@@ -883,5 +883,144 @@
     "extraktion": "AT: Tischlereien nach Bundesland/Ort",
     "entdeckt_am": "2026-07-14",
     "entdeckt_via": "recherche-fleet-2026-07-14"
+  },
+  {
+    "id": "innung-parkett-nordost",
+    "name": "Innung Nordost Parkett- u. Fußbodentechnik",
+    "url": "https://www.pvnw.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Bodenleger"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Mitgliederliste Parkett/Fussboden Nordost",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
+  },
+  {
+    "id": "bv-parkett",
+    "name": "Bundesverband Parkett u. Fußbodentechnik - Fachbetriebssuche",
+    "url": "https://www.bv-parkett.de/fachbetriebe",
+    "typ": "Verband",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Bodenleger"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "bundesweite Parkett-Fachbetriebe",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
+  },
+  {
+    "id": "somfy-experts",
+    "name": "Somfy Fachpartner-Verzeichnis (Rollladen/Sonnenschutz-Montage)",
+    "url": "https://www.somfy.de/experts",
+    "typ": "Hersteller-Partnernetz",
+    "land": [
+      "DE",
+      "AT"
+    ],
+    "gewerke": [
+      "Fenster-/Rollladenbau"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Montagebetriebe Rollladen/Sonnenschutz",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
+  },
+  {
+    "id": "metallinnung-hannover",
+    "name": "Metallinnung Hannover - Betriebskarte",
+    "url": "https://metallinnung-hannover.de",
+    "typ": "Innung",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Metallbau"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Metallbau-Betriebe Raum Hannover",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
+  },
+  {
+    "id": "dachdecker-bayern",
+    "name": "Bayerisches Dachdeckerhandwerk - Betriebssuche",
+    "url": "https://dachdecker.bayern",
+    "typ": "Verband",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "Dachdecker"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "Dachdecker-Betriebe Bayern",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
+  },
+  {
+    "id": "brandenburg-shk",
+    "name": "Fachverband SHK Brandenburg",
+    "url": "https://www.brandenburg-shk.de",
+    "typ": "Verband",
+    "land": [
+      "DE"
+    ],
+    "gewerke": [
+      "SHK"
+    ],
+    "robots_ok": null,
+    "zugriff": "fetch",
+    "status": "unbewiesen",
+    "letzter_lauf": null,
+    "gefunden_gesamt": 0,
+    "qualifiziert_gesamt": 0,
+    "yield": 0.0,
+    "avg_score": null,
+    "extraktion": "SHK-Mitglieder Brandenburg",
+    "entdeckt_am": "2026-07-14",
+    "entdeckt_via": "recherche-fleet-welle2"
   }
 ]

@@ -11,7 +11,7 @@ Der Agent hat ein **Gedächtnis über Zustandsdateien** und wird mit jedem Lauf 
 - **Produkt:** Handwerkersoftware (Betriebsverwaltung: Angebote, Rechnungen, Zeiterfassung, Baustellendoku, Materialverwaltung)
 - **Zielmärkte:** DE, AT
 - **Zielgröße:** 1–25 Mitarbeiter (harte Obergrenze 25)
-- **Tagesziel:** bis zu 25 qualifizierte, **neue** Leads pro Lauf
+- **Tagesziel:** mindestens 50 qualifizierte, **neue** Leads pro Lauf
 - **Ziel-Gewerke:** SHK, Elektro, Maler & Lackierer, Fliesenleger, Zimmerer/Dachdecker, Tischler/Schreiner, Bodenleger/Parkett, Trockenbau, Garten- & Landschaftsbau, Metallbau, Stuckateur, Estrichleger, Fenster-/Rollladenbau.
 
 ---
@@ -87,21 +87,41 @@ Beim allerersten Lauf werden die Zustandsdateien angelegt und `sources.json` mit
 |---|---|
 | `scripts/process_harvest.py` | Verarbeitet die Roh-Harvest-JSONs eines Laufs: **Dedup gegen `leads.jsonl`** (Domain > Name+PLZ > Telefon), Scoring (A–E), Aufhänger, **Backlog-Promotion**, schreibt `daily/<datum>.md`, schreibt `leads.jsonl` fort, hängt `metrics.csv`-Zeile an. |
 | `scripts/md_to_pdf.py` | Rendert einen `daily/<datum>.md` nach **PDF** (headless Chromium, kein externes Paket nötig). |
+| `scripts/export_hubspot_csv.py` | Exportiert `leads.jsonl` als **HubSpot-Import-CSV** (Objekt: Firmen). Kein Token nötig. |
+| `scripts/hubspot_sync.py` | Synct Leads via **HubSpot CRM-API** (Firmen upsert, Dedup über `domain`). Sicher: ohne `--commit` nur Dry-Run. |
 
 **Manueller Tageslauf:**
 ```bash
 # 1) Recherche-Agenten befüllen harvest/<datum>/harvest_<segment>.json (je Lead über Impressum verifiziert)
-# 2) Verarbeiten:
-python3 scripts/process_harvest.py --harvest-dir harvest/<datum> --date <datum> --repo . --sources-used 8 --new-sources 0
+# 2) Verarbeiten (Budget = min. Leads/Tag):
+python3 scripts/process_harvest.py --harvest-dir harvest/<datum> --date <datum> --repo . --budget 50 --sources-used 18 --new-sources 0
 # 3) PDF erzeugen:
 python3 scripts/md_to_pdf.py daily/<datum>.md daily/<datum>.pdf
+# 4) HubSpot-CSV der heutigen Übergabe:
+python3 scripts/export_hubspot_csv.py --in leads.jsonl --status uebergeben --out daily/<datum>_hubspot.csv
 ```
 
-Der Report wird **immer auch als PDF** unter `daily/<datum>.pdf` ausgegeben und dem AE geliefert.
+Der Report wird **immer auch als PDF** unter `daily/<datum>.pdf` ausgegeben und dem AE geliefert. Das Tagesbudget (min. Leads/Tag) steuert `--budget` (Default 50).
+
+### HubSpot-Integration
+
+Zwei Wege, beide aus derselben `leads.jsonl`:
+
+**A) CSV-Import (ohne Zugangsdaten).** `export_hubspot_csv.py` erzeugt eine CSV mit HubSpot-freundlichen Spalten (Company name, Domain, Phone, City, Postal Code, Country + SDR-Felder Gewerk/Score/MA/Aufhänger/Fit-Signale/Quelle). In HubSpot unter **Import → Firmen** hochladen; Standardspalten werden automatisch erkannt, die SDR-Spalten auf (eigene) Eigenschaften mappen.
+
+**B) API-Sync (automatisierbar).** `hubspot_sync.py` legt Firmen direkt an/aktualisiert sie über die HubSpot CRM-API v3, dedupliziert über die Eigenschaft `domain`. **Sicher by default:** ohne `--commit` nur Dry-Run.
+```bash
+export HUBSPOT_TOKEN=pat-...                                   # Private-App-Token
+python3 scripts/hubspot_sync.py --check                         # Verbindung testen
+python3 scripts/hubspot_sync.py --create-properties --commit    # eigene Company-Properties einmalig anlegen
+python3 scripts/hubspot_sync.py --status uebergeben             # Dry-Run: zeigt Payloads
+python3 scripts/hubspot_sync.py --status uebergeben --commit    # wirklich syncen
+```
+Benötigte Private-App-Scopes: `crm.objects.companies.read/write`, `crm.schemas.companies.read/write`. Die tägliche Routine synct automatisch, **sobald** `HUBSPOT_TOKEN` in der Umgebung gesetzt ist — sonst erzeugt sie nur die CSV.
 
 ### Tägliche Routine
 
-Eine **Routine** (scheduled trigger) startet täglich eine frische Session, die den kompletten Runbook-Lauf ausführt (Harvest → Verarbeiten → PDF → commit/push) und den neuen Report als PDF liefert. Läuft auf Branch `claude/handwerk-lead-sdr-4hrxjs`. Zeitpunkt/Änderung siehe Routine-Einstellungen.
+Eine **Routine** (scheduled trigger, täglich 06:00 UTC) startet eine frische Session, die den kompletten Runbook-Lauf ausführt (Harvest mit 16–18 Segmenten → Verarbeiten mit `--budget 50` → PDF → HubSpot-CSV → optional HubSpot-API-Sync → commit/push) und **PDF + CSV** proaktiv liefert (Push/E-Mail). Läuft auf Branch `claude/handwerk-lead-sdr-4hrxjs`. Zeitpunkt/Änderung siehe Routine-Einstellungen.
 
 > Alternativ: GitHub-Actions-Daily-Cron, der dieselben Skripte ausführt und den Zustand zurück-committet.
 
